@@ -151,11 +151,77 @@ Guidelines:
 
 ---
 
+## Design Tokens
+
+Design tokens translate the Talent brand into reusable implementation primitives. They are the source of consistency across product, marketing, and interface work.
+
+Design tokens should be maintained in the product design system and mirrored in code. Any new UI surface should use existing tokens before introducing new styles.
+
+### Colors
+
+- `background-primary`
+- `background-secondary`
+- `text-primary`
+- `text-secondary`
+- `border-default`
+- `status-positive`
+- `status-negative`
+- `status-neutral`
+- `rank-gold`
+- `rank-silver`
+- `rank-bronze`
+
+Guidelines:
+- Use semantic tokens instead of raw color values.
+- Introduce new color tokens only when they encode a distinct functional meaning.
+- Avoid one-off decorative colors.
+
+### Typography
+
+- `font-sans`
+- `text-heading-lg`
+- `text-heading-md`
+- `text-body`
+- `text-label`
+- `text-metric`
+
+Guidelines:
+- Use typography tokens to preserve hierarchy and scanability.
+- Metrics, rankings, and scores should use dedicated metric styles when available.
+- Avoid custom font sizes outside the token system.
+
+### Spacing
+
+- `space-xs`
+- `space-sm`
+- `space-md`
+- `space-lg`
+- `space-xl`
+
+Guidelines:
+- Use spacing tokens for layout, component padding, and gaps.
+- Prefer consistent spacing patterns over arbitrary values.
+- Maintain generous spacing without reducing data clarity.
+
+### Motion
+
+- `duration-fast`
+- `duration-base`
+- `ease-standard`
+
+Guidelines:
+- Use motion tokens for transitions and state changes.
+- Keep interactions fast, subtle, and purposeful.
+- Avoid custom easing or duration values unless required for accessibility or platform constraints.
+
+---
+
 ## Brand in Product
 
 - The product UI is the primary expression of the brand
 - Marketing pages should mirror product aesthetics
 - Rankings, leaderboards, and scores are the hero elements
+- Product surfaces should use design tokens as the default implementation layer
 
 ---
 
@@ -164,6 +230,7 @@ Guidelines:
 - Visuals should mirror product UI when possible
 - Screenshots > illustrations
 - Diagrams and charts over abstract imagery
+- Content layouts should follow the same typography, spacing, and color principles as product surfaces
 
 ---
 
